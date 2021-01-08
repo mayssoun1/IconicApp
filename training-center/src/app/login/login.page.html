@@ -1,9 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+      <ion-input [(ngModel)]="user.email" placeholder="Username"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input [(ngModel)]="user.password" placeholder="Password" type='password'></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-button (click)="logMeIn()">Login</ion-button>
+      <ion-button color="secondary" (click)="register()">Register</ion-button>
+    </ion-item>
+    </ion-card-content>
+    </ion-card>
 </ion-content>
